@@ -1,5 +1,6 @@
 jqMessage
 =========
+Try it yourself [http://jsfiddle.net/JaminQuimby/aCSnD/#base]
 
 Message popup and notification jquery plugin.
 
@@ -30,4 +31,5 @@ The message you wish to display<br/>
 <h3>destory</h3>
 Type: Bit<br/>
 Will remove all opened message currently being displayed. <br/>
+
 
