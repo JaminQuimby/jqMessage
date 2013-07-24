@@ -7,27 +7,27 @@ jqMessage(json) Initiates the popup message
 
 Arguments:
 
-showAfter 
-Type: Integer 
-Number of seconds to wait before displaying a message
+<h3>showAfter</h3><br/>
+Type: Integer<br/> 
+Number of seconds to wait before displaying a message<br/>
 
-duration
-Type: Integer
-Number of seconds for the message to display on the screen.
+<h3>duration</h3><br/>
+Type: Integer<br/>
+Number of seconds for the message to display on the screen.<br/>
 
-autoClose
-Type: Bit
-True or False option to close the menu automaticly, used in conjunction with duration
+<h3>autoClose</h3><br/>
+Type: Bit<br/>
+True or False option to close the menu automaticly, used in conjunction with duration<br/>
 
-type
-Type: String
-The type of message you would like to display options(error, information, warning, sucess, save)
+<h3>type</h3><br/>
+Type: String<br/>
+The type of message you would like to display options(error, information, warning, sucess, save)<br/>
 
-message
-Type: String
-The message you wish to display
+<h3>message</h3><br/>
+Type: String<br/>
+The message you wish to display<br/>
 
-destory
-Type: Bit
-Will remove all opened message currently being displayed. 
+<h3>destory</h3><br/>
+Type: Bit<br/>
+Will remove all opened message currently being displayed. <br/>
 
