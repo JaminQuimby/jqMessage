@@ -1,6 +1,6 @@
 jqMessage
 =========
-Try it yourself [http://jsfiddle.net/JaminQuimby/aCSnD/#base]
+Try it yourself [http://jsfiddle.net/JaminQuimby/aCSnD/7/embedded/result/]
 
 Message popup and notification jquery plugin.
 
@@ -28,8 +28,16 @@ The type of message you would like to display options(error, information, warnin
 Type: String<br/>
 The message you wish to display<br/>
 
-<h3>destory</h3>
-Type: Bit<br/>
-Will remove all opened message currently being displayed. <br/>
+<h3>description</h3>
+Type: JSON
+Arguments: Message, Link, Linkname
+Adds a secondary pannel for message details and a clickable link.
+
+<h3>buttons</h3>
+Type: JSON ARRAY
+Add multiple buttons onto the error pannel. 
+Example:
+[{"name":"Save","function":"alert('Saved')"},{"name":"Exit","function":"alert('Exit')"}] 
+
 
 
