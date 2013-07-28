@@ -11,8 +11,8 @@ $('#jqMessage').remove();
         'autoClose' : false, // flag to autoClose notification message
         'type' : 'success', // type of info message error/success/info/warning
         'message': '', // message to dispaly
-        'description' :{"message":"Hello World This is the details about my error message","link":"google.com","linkname":"Learn More"}, //Details {"Description":"Hello World This is the details about my error message","Link":"google.com"}
-		'buttons':[{"name":"Save","function":"alert('Saved')"},{"name":"Exit","function":"alert('Exit')"}] // Pass it a json array for buttons [{"name":"Save","function":"alert('Saved')"},{"name":"Exit","function":"alert('Exit')"}]
+        'description' :'',//{"message":"Hello World This is the details about my error message","link":"google.com","linkname":"Learn More"}, //Details {"Description":"Hello World This is the details about my error message","Link":"google.com"}
+		'buttons':''//[{"name":"Save","function":"alert('Saved')"},{"name":"Exit","function":"alert('Exit')"}] // Pass it a json array for buttons [{"name":"Save","function":"alert('Saved')"},{"name":"Exit","function":"alert('Exit')"}]
 
 	}; 
     // Extending array from params
