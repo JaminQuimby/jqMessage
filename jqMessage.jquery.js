@@ -3,7 +3,7 @@ Writen by Jamin Quimby - All rights reserved
 
 */
 jqMessage=function(params){
-$('#jqMessage').remove();
+if($('#jqMessage').length){$('#jqMessage').remove()};
     // options array
     var options = { 
         'showAfter': 0, // number of sec to wait after page loads
