@@ -29,23 +29,25 @@ if($('#jqMessage').length){$('#jqMessage').remove()};
 		}
     
    // Parent Div container
-    var container = '<div id="jqMessage" class="'+msgclass+'"><div>'
+var container = '<div id="jqMessage" class="'+msgclass+'"><div>'
 	container +='<p>'+options['type']+'<p><h3>'+options['message']+'</h3>';
-		if(options['type']=="save"){container+='<div class="jqImgSave"></div>'};
+	
+ if(options['type']=="save"){container+='<div class="jqImgSave"></div>'};
 		container += '<div onclick="return _closeNotification(0,'+$(this)+')"></div></div>'
-		if(options["buttons"]!=''){container+=_addButtons(options["buttons"],msgbx);}
+ if(options["buttons"]!=''){container+=_addButtons(options["buttons"],msgbx);}
 		container+='<div>';
 	
    // Appeding notification to Body
-	$('body').append(container);
-	var msgbx=$('#jqMessage')
+ $('body').append(container);
+ var msgbx=$('#jqMessage')
    // see CSS top to minus of div height
-	msgbx.css({ top : '-'+msgbx.height()+'px' });
+ msgbx.css({ top : '-'+msgbx.height()+'px' });
    // showing notification message, default it will be hidden
-	msgbx.show();
+ msgbx.show();
     
    // Slide Down notification message after startAfter seconds
-    _slideDownNotification(options['showAfter'], options['autoClose'],options['duration'],msgbx);
+
+_slideDownNotification(options['showAfter'], options['autoClose'],options['duration'],msgbx);
     msgbx.on('click', function(){
 		if(options['description']!=''){
 		msgbx.html(_addDetails(options['description'])).slideDown('slow')
@@ -68,18 +70,23 @@ _closeNotification=function(duration,msgbx){
     setTimeout(
 		function(){
         	msgbx.slideUp('fast'
-			,function(){$('body').remove(msgbx)})}
+			,function(){
+				//$('body').remove(msgbx) //Caused a Bug in IE
+			})}
 			,parseInt(duration * 50))}
 
 //Build Buttons
 _addButtons=function(buttons){
 container='<div class="jqButtonBox">';
 for(var key in eval(buttons)){
-   if(buttons.hasOwnProperty(key)){
-	container+='<a href="#" onclick="'+buttons[key].function+'">'+buttons[key].name+'</a>'}}
-	container+='</div>';
-	return container;
+if(buttons.hasOwnProperty(key)){if( buttons[key].name !=''){
+if(buttons[key].class !=''){ cl='class="'+buttons[key].class+'"' }
+	container+='<a '+cl+' onclick="'+buttons[key].function+'">'+buttons[key].name+'</a>'
+}}};
+container+='</div>'; 
+return container;
 }
+
 
 //Add Details
 _addDetails=function(details,msgbx){container='<div>'+details["message"]+'<a href="'+details["link"]+'">'+details["linkname"]+'</a><a href="#" onclick="_closeNotification(0,$(this))">X</a></div>';return container}
